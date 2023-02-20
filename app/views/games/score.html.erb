@@ -1,0 +1,11 @@
+
+
+<% if @english_word%>
+<h5> <strong> Congratulations! </strong>  <%= "#{@answer.join}" %> </strong> is a valid English word" </h5>
+<% elsif @included %>
+  <h5>Sorry but <strong> <%= "#{@answer.join}" %> </strong> cannot be built out of <%= "#{@original_letters}" %> </h5>
+<% else %>
+  <h5>Sorry but <strong> <%= "#{@answer.join}" %> </strong> is not a valid English word </h5>
+<% end %>
+
+<%= link_to "Play again?", home_path %>
